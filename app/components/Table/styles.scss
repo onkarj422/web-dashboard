@@ -1,0 +1,12 @@
+.ReactVirtualized__Table__row {
+    @apply w-full text-xs border-b border-gray-200 !important;
+}
+
+.ReactVirtualized__Table__headerRow {
+    @apply w-full h-10 text-xs text-gray-500 border-b border-gray-200 !important;
+}
+
+.ReactVirtualized__Grid__innerScrollContainer {
+    width: 100% !important;
+    max-width: unset !important;
+}
