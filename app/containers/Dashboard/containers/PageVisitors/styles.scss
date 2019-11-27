@@ -1,0 +1,15 @@
+.content {
+    @apply w-full h-full bg-gray-100 !important;
+}
+
+.widget-title {
+    @apply flex flex-col items-center text-center mb-2 !important;
+}
+
+.title-text {
+    @apply text-sm uppercase text-gray-500 !important;
+}
+
+.main-value {
+    @apply text-3xl text-gray-800 font-semibold mb-2 !important;
+}
