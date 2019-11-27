@@ -8,21 +8,30 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import MediaQueryProvider from 'providers/MediaQuery';
+import LayoutProvider from 'layouts/ShellLayout/LayoutProvider';
+import Router from './components/Router';
 
 import GlobalStyle from '../../global-styles';
+import routes from './routes';
+import './styles.scss';
+import Layout from '../../layouts/ShellLayout/index';
 
 export default function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </div>
+    <MediaQueryProvider>
+      <div>
+        <BrowserRouter>
+          <LayoutProvider>
+            <Layout>
+              <Router routes={routes} />
+            </Layout>
+          </LayoutProvider>
+        </BrowserRouter>
+        <GlobalStyle />
+      </div>
+    </MediaQueryProvider>
   );
 }

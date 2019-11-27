@@ -1,0 +1,7 @@
+.header {
+    @apply bg-white border-b border-gray-200 border-solid flex items-center px-6 z-40 !important;
+}
+
+.fixed-top {
+    @apply sticky top-0 !important;
+}
